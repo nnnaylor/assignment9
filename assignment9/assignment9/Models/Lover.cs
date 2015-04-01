@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
@@ -29,5 +30,11 @@ namespace assignment9.Models
         [Display(Name = "Past Hot Dogs")]
         [StringLength(60, MinimumLength = 3)]
         public string PastDog { get; set; }
+
+    }
+
+    public class HotdogDbContext : ApplicationDbContext
+    {
+        public DbSet<Lover> Lover { get; set; }
     }
 }

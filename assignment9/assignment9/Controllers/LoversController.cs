@@ -12,7 +12,7 @@ namespace assignment9.Controllers
 {
     public class LoversController : Controller
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
+        private HotdogDbContext db = new HotdogDbContext();
 
         // GET: Lovers
         public ActionResult Index()
